@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Email from someone | Virtual Email from Mark6132014 in Github
+    </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <center><div class="container">
+    <h1>
+        Make an email to somebody
+    </h1>
+    <hr>
+    <p id="to"></p>
+    <br>
+    <p id="from"></p>
+    <br>
+    <h3 id="header">
+        Type in your header
+    </h3>
+    <hr>
+    <p id="content">
+        Type in your content/message
+    </p>
+    </div></center>
+    <script>
+        function getUrlParams() {
+    const params = {};
+    const queryString = window.location.search.substring(1);
+    const regex = /([^&=]+)=([^&]*)/g;
+    let m;
+    while (m = regex.exec(queryString)) {
+        params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+    }
+    return params;
+}
+      function getParam() {
+        const param = getUrlParams();
+        var decodeTo = decodeURIComponent(param.to);
+        var decodeFrom = decodeURIComponent(param.from);
+        var decodeHeader = decodeURIComponent(param.header);
+        var decodeContent = decodeURIComponent(param.content);
+        console.log(decodeTo);
+        console.log(decodeFrom);
+        console.log(decodeHeader);
+        console.log(decodeContent);
+        document.getElementById("to").innerHTML = "To: " + decodeTo;
+        document.getElementById("from").innerHTML = "From: " + decodeFrom;
+        document.getElementById("header").innerHTML = decodeHeader;
+        document.getElementById("content").innerHTML = decodeContent;
+      }
+      getParam();
+    </script>
+</body>
+</html>
