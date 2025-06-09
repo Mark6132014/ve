@@ -1,0 +1,22 @@
+document.getElementById("generate").addEventListener("click", () => {
+    var emailTo = document.getElementById("to").value;
+    var emailFrom = document.getElementById("from").value;
+    var emailHeader = document.getElementById("header").innerText;
+    var emailContent = document.getElementById("content").innerText;
+    console.log(emailTo);
+    console.log(emailFrom);
+    console.log(emailHeader);
+    console.log(emailContent);
+    var emailToURL = encodeURIComponent(emailTo);
+    var emailFromURL = encodeURIComponent(emailFrom);
+    var emailHeaderURL = encodeURIComponent(emailHeader);
+    var emailContentURL = encodeURIComponent(emailContent);
+    console.log(emailToURL);
+    console.log(emailFromURL);
+    console.log(emailHeaderURL);
+    console.log(emailContentURL);
+    var URL = `https://mark6132014.github.io/ve/email?to=${emailToURL}&from=${emailFromURL}&header=${emailHeaderURL}&content=${emailContentURL}`;
+    console.log(URL);
+    document.getElementById("sent").style.display = "block";
+    document.querySelector("#sent #generatedLink").innerHTML = "Link: " + URL;
+});

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Virtual Email
+    </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <center><div class="container">
+    <h1>
+        Make an email to somebody
+    </h1>
+    <hr>
+    <p>
+        To:
+    </p>
+    <input id="to" size="30" placeholder="Example: john.doe@ve">
+    <br>
+    <p>
+        From:
+    </p>
+    <input id="from" size="30" placeholder="Example: you@ve">
+    <br>
+    <h3 contenteditable="true" id="header">
+        Type in your header
+    </h3>
+    <hr>
+    <p contenteditable="true" id="content">
+        Type in your content/message
+    </p>
+    <hr>
+    <button id="generate">
+        Send/Generate Email
+    </button>
+    </div>
+<br>
+<div id="sent" style="display: none;">
+<h1>
+    Your email has been sent
+</h1>
+<p>
+    <span id="generatedLink">Link: https://mark6132014.github.io/ve/email?to=john.doe@ve&from=you@ve&header=Type%20In%20Your%20Header&content=demo</span>
+    <br>
+    How to make the link shorter:
+    <br>
+    Go to tinyurl.run url shortener.
+    <br>
+    Shorten the url
+    <br>
+    Copy the tinyurl.run shorten url id.
+    <br>
+    Paste it to this link: https://mark6132014.github.io/ve/quick-email?ID=
+    <br>
+    It should be like this: https://mark6132014.github.io/ve/quick-email?ID=BiT1Y14
+</p>
+</div></center>
+    <script src="index.js"></script>
+</body>
+</html>
